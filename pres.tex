@@ -1,0 +1,120 @@
+\documentclass{tamupres/tamupres}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{lipsum} %% for dummy text
+
+\newcommand{\fakepoints}[1]{
+  \begin{itemize}
+  \item \lipsum[#1][1]
+  \item \lipsum[#1][2]
+  \item \lipsum[#1][3]
+  \item \lipsum[#1][4]
+  \end{itemize}
+}
+
+\def\thetitle{The Title of The Great Presentation}
+\def\theauthor{Full Official Name}
+\def\theuin{123456789}
+\def\theemail{me@tamu.edu}
+
+\tamuinit{}
+
+\begin{document}
+
+\tamutitlepage{}
+
+\begin{frame}{Committee}
+  \begin{itemize}
+  \item Chair: Prof. Chair
+  \item Co-Chair: Prof. Co Chair
+  \item Member: Prof. Member One
+  \item Member: Prof. Member Two
+  \item Member: Prof. Member Three
+  \item Member: Prof. Member Four
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Introduction}
+  \fncite{samplebib}
+  \lipsum[10][1]~\cite{samplebib}.
+  \fakepoints{1}
+\end{frame}
+
+\begin{frame}{Problem statement}
+  \lipsum[10][2]~\cite{mybib1}.
+  \fncite{mybib1}
+  \fakepoints{2}
+\end{frame}
+
+\begin{frame}{Contributions}
+  The main contributions can be summarized as follows:
+  \fakepoints{3}
+\end{frame}
+
+\section{Methodology}
+\begin{frame}{How}
+  \begin{columns}
+    \begin{column}{.4\columnwidth}
+      \fakepoints{4}
+    \end{column}
+    \begin{column}{.6\columnwidth}
+      \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=\linewidth]{samplefig.png}
+        \caption{Some random figure}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{What}
+  \fncite{mybib2}
+  \lipsum[10][3]~\cite{mybib2}.
+  \fakepoints{5}
+\end{frame}
+
+\begin{frame}{Where}
+  \fncite{mybib3}
+  \lipsum[10][3]~\cite{mybib3}.
+  \fakepoints{6}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Conclusion and future work}
+  \alert{Concluding remarks:}
+  \fakepoints{7}
+
+  \alert{Future work:}
+  \fakepoints{8}
+\end{frame}
+
+\begin{frame}{References}
+  \tiny
+  \bibliographystyle{ieeetr}
+  \bibliography{./refs.bib}
+\end{frame}
+
+\section{End}
+\begin{frame}[fragile]{End}
+  \centering\large
+  Thank you for your attention
+
+  Any questions?
+
+  \vspace{1cm}\footnotesize
+  \begin{center}
+    \theauthor{}
+
+    \texttt{\theemail{}}
+  \end{center}
+\end{frame}
+
+\end{document}

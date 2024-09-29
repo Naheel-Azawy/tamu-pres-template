@@ -1,0 +1,9 @@
+* TAMU LaTeX Presentation Template
+A general purpose template for Texas A&M presentations.
+Suitable for thesis or dissertation defense, prelim, qualifying, or others.
+
+** Usage
+The file ~pres.tex~ is an example presentation. Use it as base to write your presentation.
+
+** License
+[[https://www.latex-project.org/lppl.txt][LPPL]]
